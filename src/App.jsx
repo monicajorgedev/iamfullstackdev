@@ -21,7 +21,7 @@ const fetchData = async () => {
 
 useEffect(() => {
   fetchData()
-}, [])
+}, [data])
 
   return (
     <Router>
@@ -40,7 +40,7 @@ useEffect(() => {
               <Route key={item._id} path={`/${item._id}`} element={<ItemDetailPage item={item}/>} />
             ))
             }
-            <Route path="/create" element={<InputCreate urlApi={urlApi} fetchData={fetchData}/>}/>
+            <Route path="/create" element={<InputCreate urlApi={urlApi}/>}/>
           </Routes>
         }
         
